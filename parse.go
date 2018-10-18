@@ -13,7 +13,6 @@ func Parse(reader io.Reader) ([]Elem, error) {
 		return elems, nil
 	}
 	return nil, parser.err()
-
 }
 
 type parser struct {

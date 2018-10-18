@@ -341,7 +341,6 @@ type LexPos struct {
 }
 
 // update position based on input rune.
-// Note: tab counts as one character.
 func (pos *LexPos) update(r rune) {
 	switch r {
 	case '\t': // Count tabs using a 8 character tab stop
