@@ -57,7 +57,7 @@ func TestElem_List(t *testing.T) {
 	checkError(t, "stringElem.ExpectList()", err, "1:0: expected list, found string")
 
 	_, err = assocElem.ExpectList()
-	checkError(t, "assocElem.ExpectList()", err, "1:0: expected list, found assoc")
+	checkError(t, "assocElem.ExpectList()", err, "1:0: expected list, found association list")
 
 	if _, ok := listElem.IsList(); !ok {
 		t.Fatalf("listElem.IsList() = false")
@@ -75,7 +75,7 @@ func TestElem_Assoc(t *testing.T) {
 	checkError(t, "assocElem.ExpectAssoc()", err, "nil")
 
 	_, err = stringElem.ExpectAssoc()
-	checkError(t, "stringElem.ExpectAssoc()", err, "1:0: expected assoc, found string")
+	checkError(t, "stringElem.ExpectAssoc()", err, "1:0: expected association list, found string")
 
 	if _, ok := assocElem.IsAssoc(); !ok {
 		t.Fatalf("assocElem.IsAssoc() = false")

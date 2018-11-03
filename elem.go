@@ -29,7 +29,7 @@ func (et elemType) String() string {
 	case elemTypeList:
 		return "list"
 	case elemTypeAssoc:
-		return "assoc"
+		return "association list"
 	}
 	return "?"
 }
